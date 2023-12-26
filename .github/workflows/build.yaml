@@ -7,3 +7,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Editor Config
+        uses: zbeekman/EditorConfig-Action@v1.1.1
