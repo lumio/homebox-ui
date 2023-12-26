@@ -3,8 +3,7 @@
 ## Todos:
 
 - [ ] Setup GitHub Actions
-    - [ ] Enforce .editorconfig
-    - [ ] Enforce .eslintrc.js
     - [ ] Enforce dependency-cruiser
+- [x] Husky
 
 ## Getting Started
