@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "./test.sh",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dep": "depcruise src",
@@ -29,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "autoprefixer": "^10.0.1",
+    "c8": "^8.0.1",
     "commitlint": "^18.4.3",
     "conventional-changelog-atom": "^4.0.0",
     "conventional-changelog-cli": "^4.1.0",
@@ -37,10 +39,21 @@
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "postcss": "^8",
     "prettier": "^3.1.1",
     "standard-changelog": "^5.0.0",
     "tailwindcss": "^3.3.0",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "exclude": [
+      "**/*.test.ts"
+    ]
   }
 }
