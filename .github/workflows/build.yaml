@@ -2,7 +2,7 @@ name: Build
 on: push
 
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
 
     steps:
