@@ -1,15 +1,8 @@
 import React from "react";
-import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./globals.css";
-import {AppRouterCacheProvider} from "@mui/material-nextjs/v13-appRouter";
+import {Container} from "@mui/material";
 
 const inter = Inter({subsets: ["latin"]});
-
-export const metadata: Metadata = {
-    title: "HomeBox",
-    description: "A custom UI for HomeBox",
-};
 
 export default function RootLayout({
     children,
@@ -19,9 +12,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <AppRouterCacheProvider>
+                <Container component="main" maxWidth="xs">
                     {children}
-                </AppRouterCacheProvider>
+                </Container>
             </body>
         </html>
     );
