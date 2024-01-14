@@ -3,7 +3,6 @@ module.exports = {
     plugins: [
         "@typescript-eslint",
         "@stylistic/ts",
-    // "@stylistic/tsx",
     ],
     extends: [
         "next/core-web-vitals",
@@ -47,5 +46,7 @@ module.exports = {
             "double",
         ],
         "@typescript-eslint/adjacent-overload-signatures": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
     },
 };

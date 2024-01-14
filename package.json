@@ -9,7 +9,7 @@
     "test": "./test.sh",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "dep": "depcruise src",
+    "dep": "depcruise src --exclude src/app",
     "prepare": "husky install"
   },
   "dependencies": {
