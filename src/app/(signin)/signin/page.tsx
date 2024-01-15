@@ -1,11 +1,11 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import LockOutlinedIcon from "@mui/icons-material/Inventory2";
 import Typography from "@mui/material/Typography";
-import LoginForm from "@/app/components/login-form";
+import SignInForm from "../../components/signin-form";
 
-export default function Login() {
+export default function SignIn() {
     return (
         <Box
             sx={{
@@ -17,7 +17,9 @@ export default function Login() {
         >
             <Avatar sx={{
                 m: 1,
-                bgcolor: "secondary.main",
+                bgcolor: "primary.main",
+                width: 64,
+                height: 64,
             }}>
                 <LockOutlinedIcon/>
             </Avatar>
@@ -25,7 +27,7 @@ export default function Login() {
                 Sign in
             </Typography>
 
-            <LoginForm/>
+            <SignInForm/>
         </Box>
     );
 }

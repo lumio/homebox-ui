@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import React from "react";
 
-export default function LoginForm() {
+export default function SignInForm() {
     const handleSubmit = () => {
     };
 
