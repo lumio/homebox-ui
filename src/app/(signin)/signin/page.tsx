@@ -9,7 +9,8 @@ export default function SignIn() {
     return (
         <Box
             sx={{
-                marginTop: 8,
+                my: 8,
+                mx: 4,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",

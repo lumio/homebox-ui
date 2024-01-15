@@ -1,15 +1,27 @@
 "use client";
 
-import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {
+    createTheme,
+    ThemeProvider,
+    THEME_ID,
+    PaletteOptions,
+} from "@mui/material/styles";
 import React from "react";
 
-const defaultTheme = createTheme();
+const palette: PaletteOptions = {
+    primary: {
+        main: "#496552",
+    },
+};
+const materialTheme = createTheme({
+    palette,
+});
 
 export default function Theme({children}: {
     children: React.ReactNode;
 }) {
     return (
-        <ThemeProvider theme={defaultTheme}>
+        <ThemeProvider theme={{[THEME_ID]: materialTheme}}>
             {children}
         </ThemeProvider>
     );
