@@ -3,7 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/Inventory2";
 import Typography from "@mui/material/Typography";
-import SignInForm from "../../components/signin-form";
+import SignInForm from "../../components/signin-form/signin-form";
 
 export default function SignIn() {
     return (

@@ -9,11 +9,11 @@ const StylisticBackgroundRoot = styled(
         name: "StylisticBackground",
         slot: "root",
     }
-)(({theme}) => ({
+)((props) => ({
     display: "flex",
     width: "100%",
     height: "100%",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: props.theme.palette.primary.main,
 }));
 
 export default function StylisticBackground() {
