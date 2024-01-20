@@ -13,20 +13,27 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <header>
-                    <Navigation/>
-                </header>
+                <div className="h-screen mt-2">
+                    <div className="fixed flex-none min-h-full w-1/3">
+                        <SideNavigation/>
+                    </div>
 
-                <SideNavigation/>
+                    <div className="flex justify-end">
+                        <header className="fixed w-2/3 h-12">
+                            <Navigation/>
+                        </header>
 
-                <main>
+                        <div className="w-2/3 p-2 pr-4 flex flex-col">
+                            <main className="flex-1 mt-16 pt-4">
+                                {children}
+                            </main>
 
-                    {children}
-                </main>
-
-                <footer>
-                    <p>Footer</p>
-                </footer>
+                            <footer className="mb-2">
+                                <p>Footer</p>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
             </body>
         </html>
     );

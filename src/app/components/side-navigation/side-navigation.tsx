@@ -1,25 +1,15 @@
 "use client";
 
-import {styled} from "@mui/material/styles";
-import Grid from "@mui/material/Grid";
-
-const SideNavigationRoot = styled(
-    "aside",
-    {
-        name: "SideNavigation",
-        slot: "root",
-    }
-)((props) => ({
-    display: "block",
-    background: props.theme.palette.primary.main,
-}));
+import * as React from "react";
 
 export default function SideNavigation() {
     return (
-        <Grid>
-            <SideNavigationRoot>
-                test
-            </SideNavigationRoot>
-        </Grid>
+        <aside className="m-2 p-2 shadow-lg rounded bg-white">
+            <nav className="overflow-auto">
+                <ul>
+                    <li>Logout</li>
+                </ul>
+            </nav>
+        </aside>
     );
 }

@@ -6,9 +6,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-  }
+    :root {
+    }
 }
 
 body {
+    background: #f8fafc;
 }
