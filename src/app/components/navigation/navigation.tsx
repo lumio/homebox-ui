@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function Navigation() {
     return (
-        <nav className="py-2 pr-2">
+        <nav className="py-4">
             <ul className="flex flex-nowrap justify-end items-center bg-white p-2 pr-2 shadow-lg rounded">
                 <li>Logout</li>
                 <li>
