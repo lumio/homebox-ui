@@ -1,31 +1,37 @@
 "use client";
 
-import Typography from "@mui/material/Typography";
 import Tag from "@/app/components/tag";
 
 export type ItemProps = {
     name: string;
+    coverImage?: string;
+    description?: string;
+    tags: string[];
 };
 
 export default function Item(props: ItemProps) {
     return (
-        <div className="max-w-xs rounded overflow-hidden shadow-lg pb-4">
+        <div className="w-52 rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4">
             <div className="max-h-52 overflow-hidden">
                 <img
                     className="w-full object-cover"
-                    src={"https://picsum.photos/300"}
+                    src={props.coverImage
+                        ? props.coverImage
+                        : "https://picsum.photos/300"}
                     alt={props.name}
                 />
             </div>
             <div className="p-4 pb-0">
-                <Typography gutterBottom variant="h5" color="text.secondary">{props.name}</Typography>
-                <Typography variant="body2" color="text.secondary">testing</Typography>
+                <h3 className="text-xl text-black">{props.name}</h3>
+                {props.description
+                    ? <div className="text-sm text-black">{props.description}</div>
+                    : null}
             </div>
-            <div className="p-4 pb-0">
-                <Tag name='test'/>
-                <Tag name='foo'/>
-                <Tag name='bar'/>
-            </div>
+            {props.tags?.length
+                ? <div className="p-4 pb-0">
+                    {props.tags?.map((tag) => <Tag key={tag} name={tag}/>)}
+                </div>
+                : null}
         </div>
     );
 }

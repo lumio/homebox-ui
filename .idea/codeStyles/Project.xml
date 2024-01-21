@@ -27,6 +27,7 @@
     <JSCodeStyleSettings version="0">
       <option name="FORCE_SEMICOLON_STYLE" value="true" />
       <option name="FORCE_QUOTE_STYlE" value="true" />
+      <option name="JSX_ATTRIBUTE_VALUE" value="None" />
     </JSCodeStyleSettings>
     <codeStyleSettings language="JavaScript">
       <option name="INDENT_CASE_FROM_SWITCH" value="false" />
