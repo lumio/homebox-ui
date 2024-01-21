@@ -13,6 +13,7 @@ module.exports = {
     ],
     root: true,
     rules: {
+        "@next/next/no-img-element": "off",
         "@stylistic/indent": ["error", 4],
         "@stylistic/array-element-newline": [
             "error", {

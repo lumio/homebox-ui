@@ -1,6 +1,6 @@
 "use client";
 
-import Tag from "@/app/components/tag";
+import TagList from "@/app/components/tag-list";
 
 export type ItemProps = {
     name: string;
@@ -30,7 +30,7 @@ export default function Item(props: ItemProps) {
             </div>
             {props.tags?.length
                 ? <div className="p-4 pb-0">
-                    {props.tags?.map((tag) => <Tag key={tag} name={tag}/>)}
+                    <TagList tags={props.tags}/>
                 </div>
                 : null}
         </a>
