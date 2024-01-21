@@ -2,6 +2,7 @@ import React from "react";
 import {Inter} from "next/font/google";
 import Navigation from "@/app/components/navigation";
 import SideNavigation from "@/app/components/side-navigation";
+import {MOCK_LOCATIONS} from "@/__mock__/locations";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,7 +20,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <div className="min-h-screen">
                     <div className="fixed flex-none h-full p-4 w-72">
-                        <SideNavigation/>
+                        <SideNavigation locations={MOCK_LOCATIONS}/>
                     </div>
 
                     <div className="flex justify-end">

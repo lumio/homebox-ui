@@ -1,41 +1,22 @@
 "use client";
 
 import * as React from "react";
+import Location from "@/app/components/location";
+import {LocationProps} from "@/app/components/location/location";
 
-export default function SideNavigation() {
-    const onDragOver = (e: React.DragEvent) => {
-        e.dataTransfer.effectAllowed = "move";
-        e.dataTransfer.dropEffect = "move";
-        e.preventDefault();
-    };
+export type SideNavigationProps = {
+    locations: LocationProps[];
+};
 
-    const onDrop = (e: React.DragEvent) => {
-        console.log(e.dataTransfer.getData("application/json"));
-        e.preventDefault();
-    };
-
+export default function SideNavigation(props: SideNavigationProps) {
+    const locations = props.locations ?? [];
     return (
         <aside className="p-2 shadow-lg rounded bg-white h-full">
             <nav className="overflow-auto">
                 <ul>
-                    <li>Locations
-                        <ul>
-                            <li draggable>Room 1</li>
-                            <li>
-                                <span
-                                    data-dropable="some-id"
-                                    className="w-full inline-block bg-amber-500"
-                                    onDragOver={onDragOver}
-                                    onDrop={onDrop}
-                                >
-                                    Room 2
-                                </span>
-                                <ul>
-                                    <li>Room 2.1</li>
-                                    <li>Room 2.2</li>
-                                    <li>Room 2.3</li>
-                                </ul>
-                            </li>
+                    <li>Locations:
+                        <ul className='pl-4'>
+                            {locations.map((item) => <Location key={item.id} {...item} />)}
                         </ul>
                     </li>
                 </ul>
