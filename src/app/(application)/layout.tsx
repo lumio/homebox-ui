@@ -27,7 +27,7 @@ export default function RootLayout({
                             <Navigation/>
                         </header>
 
-                        <div className="p-2 flex flex-col" style={limitWidthStyles}>
+                        <div className="py-2 flex flex-col" style={limitWidthStyles}>
                             <main className="flex-1 mt-16 pt-4">
                                 {children}
                             </main>
