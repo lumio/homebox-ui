@@ -11,10 +11,11 @@ export type ItemProps = {
 
 export default function Item(props: ItemProps) {
     return (
-        <div className="w-52 bg-white rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4">
+        <a href="#" className="w-52 bg-white rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4" draggable="true">
             <div className="max-h-32 overflow-hidden">
                 <img
                     className="w-full object-cover"
+                    draggable="false"
                     src={props.coverImage
                         ? props.coverImage
                         : "https://picsum.photos/300"}
@@ -32,6 +33,6 @@ export default function Item(props: ItemProps) {
                     {props.tags?.map((tag) => <Tag key={tag} name={tag}/>)}
                 </div>
                 : null}
-        </div>
+        </a>
     );
 }
