@@ -11,8 +11,8 @@ export type ItemProps = {
 
 export default function Item(props: ItemProps) {
     return (
-        <div className="w-52 rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4">
-            <div className="max-h-52 overflow-hidden">
+        <div className="w-52 bg-white rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4">
+            <div className="max-h-32 overflow-hidden">
                 <img
                     className="w-full object-cover"
                     src={props.coverImage
