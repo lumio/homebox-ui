@@ -90,6 +90,7 @@ const randomNumber = (min: number, max: number) => crypto.randomInt(
 export const MOCK_ITEMS: Item[] = Array.from({length: 200}).map(() => {
     return {
         id: counter.incStr(),
+        locationId: "room1",
         name: randomTitle(),
         coverImage: "https://picsum.photos/" + randomNumber(
             100,
