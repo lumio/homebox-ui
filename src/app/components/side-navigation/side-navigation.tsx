@@ -11,8 +11,8 @@ export type SideNavigationProps = {
 export default function SideNavigation(props: SideNavigationProps) {
     const locations = props.locations ?? [];
     return (
-        <aside className="p-2 shadow-lg rounded bg-white h-full">
-            <nav className="overflow-auto">
+        <aside className="p-2 shadow-lg rounded bg-white h-full overflow-auto">
+            <nav>
                 <ul>
                     <li>Locations:
                         <ul className='pl-4'>

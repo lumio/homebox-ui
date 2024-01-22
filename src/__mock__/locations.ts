@@ -13,7 +13,7 @@ const generateSubLocations = (parentId: string, length = 1): Location[] => {
     }));
 };
 
-export const MOCK_LOCATIONS: Location[] = Array.from({length: 6}).map((): Location => {
+export const MOCK_LOCATIONS: Location[] = Array.from({length: 12}).map((): Location => {
     const id = counter.incStr();
     return {
         id,
