@@ -24,7 +24,7 @@ export default function RootLayout({
                     </div>
 
                     <div className="flex justify-end">
-                        <header className="fixed h-22" style={limitWidthStyles}>
+                        <header className="fixed h-22 pr-4" style={limitWidthStyles}>
                             <Navigation/>
                         </header>
 

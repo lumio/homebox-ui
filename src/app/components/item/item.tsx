@@ -37,7 +37,8 @@ export default function Item(props: ItemProps) {
     return (
         <a
             href="#"
-            className="w-1/6 box-border bg-white rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4"
+            className="box-border bg-white rounded overflow-hidden shadow-lg pb-4 mr-4 mb-4"
+            style={{width: "calc(20% - 1rem)"}}
             onDragStart={onDragStart}
             draggable
         >

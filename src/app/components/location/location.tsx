@@ -1,6 +1,8 @@
 import React from "react";
 
-const DRAG_HOVER_CLASSES: string[] = ["bg-red-400", "font-bold"];
+const LOCATION_PADDING_MIN = 0.5;
+const LOCATION_PADDING_STEP = 1;
+const DRAG_HOVER_CLASSES: string[] = ["bg-red-400"];
 
 export type LocationProps = {
     id: string;
@@ -9,6 +11,7 @@ export type LocationProps = {
     description?: string;
     element?: string;
     subLocations?: LocationProps[];
+    indentation?: number;
 };
 
 type DynamicElementProps = {
@@ -45,8 +48,10 @@ export default function Location(props: LocationProps) {
         children
     );
 
+    const indentation = props.indentation ?? 0;
     const subLocations = props.subLocations?.length
-        ? props.subLocations.map((subLocation) => <Location key={subLocation.id} {...subLocation} />)
+        ? props.subLocations.map((subLocation) => <Location key={subLocation.id}
+            indentation={indentation + 1} {...subLocation} />)
         : null;
     return (
         <DynamicElement>
@@ -55,13 +60,14 @@ export default function Location(props: LocationProps) {
                 onDragOver={onDragOver}
                 onDragLeave={resetStyles}
                 onDrop={onDrop}
-                className="block mb-1"
+                className="block p-2"
+                style={{paddingLeft: `${LOCATION_PADDING_STEP * indentation + LOCATION_PADDING_MIN}rem`}}
             >
                 {props.name}
             </a>
 
             {subLocations
-                ? <ul className="pl-4">{subLocations}</ul>
+                ? <ul>{subLocations}</ul>
                 : null}
         </DynamicElement>
     );
